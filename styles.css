@@ -372,7 +372,7 @@
     }
     .profile-pic{
         position: absolute;
-        top: 28%;
+        top: 25%;
         left: 60%;
         transform: translate(9%, -10%);
         transition: transform 0.7s ease;
