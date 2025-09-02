@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MINI Project's</title>
+</head>
+<style>
+    *{
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+    body{
+        font-family: Arial, sans-serif;
+        background: linear-gradient(90deg, #ff4d5a, #2575fc);
+    }
+    :root{
+  --glass-bg: rgba(255,255,255,.10);
+  --glass-bg-strong: rgba(255,255,255,.18);
+  --glass-border: rgba(255,255,255,.35);
+  --glass-shadow: 0 10px 30px rgba(0,0,0,.20);
+  --glass-shadow-hover: 0 20px 50px rgba(0,0,0,.25);
+  --radius: 20px;
+}
+
+body.dark {
+  --glass-bg: rgba(255,255,255,.06);
+  --glass-bg-strong: rgba(255,255,255,.12);
+  --glass-border: rgba(255,255,255,.22);
+}
+
+    h1{
+        text-align: center;
+        color: white;
+        margin: 20px 0;
+    }
+    .hero{
+        display: grid;
+        grid-template-columns: repeat(4,1fr);
+        gap:14px;
+        padding:14px;
+        justify-content: center;
+        align-items: stretch;
+        height: 100vh;
+        background: linear-gradient(90deg, #ff4d5a, #2575fc);
+        
+    }
+    .project{
+        background: white;
+        border-radius: 8px;
+        padding: 10px;
+        margin: 5px;
+        box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        height: max-content;
+    }
+    
+.project-image{
+    width: 100%;
+    height: 100px;
+    object-fit: cover;
+    border-radius: 8px;
+    margin-bottom: 15px;
+}
+
+/* the card */
+.project{
+  position: relative;
+  border-radius: var(--radius);
+  padding: 22px 24px;
+  background: linear-gradient(180deg, var(--glass-bg-strong), var(--glass-bg));
+  box-shadow: var(--glass-shadow);
+  border: 1px solid rgba(255,255,255,.25);
+  outline: 1px solid rgba(255,255,255,.08); /* subtle secondary edge */
+  backdrop-filter: blur(14px) saturate(120%);
+  -webkit-backdrop-filter: blur(14px) saturate(120%);
+  transition: transform .35s ease, box-shadow .35s ease, border-color .35s ease;
+  overflow: hidden;
+}
+
+/* gradient rim (nice touch) */
+.project::before{
+  content:"";
+  position:absolute; inset:0;
+  border-radius: inherit;
+  padding:1px;
+  background: linear-gradient(135deg, rgba(255,255,255,.55), rgba(255,255,255,0) 40%, rgba(0,163,255,.35));
+  /* -webkit-mask: 
+    linear-gradient(#000 0 0) content-box, 
+    linear-gradient(#000 0 0); */
+  -webkit-mask-composite: xor;
+          mask-composite: exclude;
+  pointer-events:none;
+  opacity:.7;
+}
+
+/* hover / focus */
+.project:hover,
+.project:focus-within{
+  transform: translateY(-6px);
+  box-shadow: var(--glass-shadow-hover);
+  border-color: rgba(255,255,255,.45);
+}
+
+/* heading & text */
+.project h2{
+  margin:0 0 8px;
+  font-weight:700;
+  letter-spacing:.2px;
+}
+.project p{
+  margin:0 0 16px;
+  color: rgba(255,255,255,.85);
+}
+
+/* button */
+.project-btn{
+  display:inline-block;
+  padding:10px 14px;
+  border-radius: 12px;
+  background: linear-gradient(90deg, rgba(255,255,255,.25), rgba(255,255,255,.15));
+  border:1px solid var(--glass-border);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  color:#fff;
+  cursor: pointer;
+  font-weight:600;
+  text-decoration:none;
+  transition: transform .2s ease, background .3s ease;
+}
+.project-btn:hover{ transform: translateY(-2px)}
+.project-btn:active{ transform: translateY(0) scale(.98) }
+
+/* fallback for browsers without backdrop-filter */
+@supports not ((backdrop-filter: blur(10px)) or (-webkit-backdrop-filter: blur(10px))){
+  .project{
+    background: rgba(255,255,255,.12);
+  }
+}
+
+</style>
+<body>
+    <h1>Mini Projects</h1>
+    <section class="hero">
+    <div class="project">
+        <img src="bkg/cat.jpg" alt="Project 1" class="project-image">
+        <h2>FreeCodeCamp</h2>
+        <p>My First Project with HTML,CSS (Cat-Painting)</p>
+        <button class="project-btn">View Project</button>
+    </div>
+    <div class="project">
+        <img src="bkg/cafe menu.avif" alt="Project 2" class="project-image">
+        <h2>Project 2</h2>
+        <p>Description of project 2.</p>
+        <button class="project-btn">View Project</button>
+    </div>
+    <div class="project">
+        <img src="bkg/balance sheet.jfif" alt="Project 1" class="project-image">
+        <h2>Project 3</h2>
+        <p>Description of project 3.</p>
+        <button class="project-btn">View Project</button>
+    </div>
+    <div class="project">
+        <img src="bkg/citylight.jpg" alt="Project 1" class="project-image">
+        <h2>Project 4</h2>
+        <p>Description of project 4.</p>
+        <button class="project-btn">View Project</button>   
+    </div>
+    <div class="project">
+        <img src="bkg/login form.avif" alt="Project 1" class="project-image">
+        <h2>Project 5</h2>
+        <p>Description of project 5.</p>
+        <button class="project-btn">View Project</button> 
+    </div>
+    <div class="project">
+        <img src="bkg/nutrition.jpg" alt="Project 1" class="project-image">
+        <h2>Project 6</h2>
+        <p>Description of project 6.</p>
+        <button class="project-btn">View Project</button> 
+    </div>
+    <div class="project">
+       <img src="bkg/penguin csss.png" alt="Project 1" class="project-image">
+        <h2>Project 7</h2>
+        <p>Description of project 7.</p>
+        <button class="project-btn">View Project</button> 
+    </div>
+    <div class="project">
+        <img src="bkg/piano.webp" alt="Project 1" class="project-image">
+        <h2>Project 8</h2>
+        <p>Description of project 8.</p>
+        <button class="project-btn">View Project</button> 
+    </div>
+    <div class="project">
+       <img src="bkg/quiz.avif" alt="Project 1" class="project-image">
+        <h2>Project 9</h2>
+        <p>Description of project 9.</p>
+        <button class="project-btn">View Project</button> 
+    </div>
+    <div class="project">
+        <img src="project1.png" alt="Project 1" class="project-image">
+        <h2>Project 10</h2>
+        <p>Description of project 10.</p>
+        <button class="project-btn">View Project</button> 
+    
+    </div>
+    </section>
+    
+
+</body>
+</html>
