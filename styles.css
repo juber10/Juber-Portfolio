@@ -365,14 +365,14 @@
     font-size: 1.5rem;
   }
   .hero-image img{
-        width: 520px;
-        height: 580px;
+        width: 420px;
+        height: 480px;
         perspective: 1000px;
         border-radius: 50%;
     }
     .profile-pic{
         position: absolute;
-        top: 38%;
+        top: 30%;
         left: 60%;
         transform: translate(9%, -10%);
         transition: transform 0.7s ease;
