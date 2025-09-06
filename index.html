@@ -5,6 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Mohd Juber's Portfolio</title>
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
@@ -20,18 +21,26 @@
       <a href="#contact">Contact</a>
     </nav>
   </header>
+   <div class="bottom-nav">
+    <a href="#hero" class="active"><i class="fas fa-home"></i></a>
+    <a href="#about"><i class="fas fa-route"></i></a>
+    <a href="#projects"><i class="fas fa-briefcase"></i></a>
+    <a href="#skills"><i class="fas fa-cogs"></i></a>
+    <a href="#contact"><i class="fas fa-envelope"></i></a>
+  </div>
 
   <!-- Hero Section -->
   <section class="hero" id="hero">
+    <div class="hero-image">
+    <img src="hero/shapes.png" alt="shape" class="shape">
+    <img src="hero/juber png.png" alt="Mohd Juber" class="profile-pic">
+    </div>
     <div class="hero-text">
-      <h2>Hello, <span>I'm Mohd Juber</span></h2>
+      <h2>Hello, <span><i>I'm Mohd Juber</i></span></h2>
       <p>Web Developer & Broadcast Engineer</p>
       <button onclick="document.getElementById('contact').scrollIntoView({behavior:'smooth'})">Contact Me</button>
     </div>
-    <div class="hero-image">
-        <img src="hero/shapes.png" alt="shape" class="shape">
-    <img src="hero/juber png.png" alt="Mohd Juber" class="profile-pic">
-    </div>
+    
     
   </section>
   <!-- stats -->
@@ -143,6 +152,7 @@
         </div>
       </div>
     </div>
+    <button class="resume-btn">View Resume</button>
   </section>
 
    <!-- Skills Section Broadcast Engineering -->
@@ -181,6 +191,38 @@
         <h4>Broadcast Camera's</h4>
         <div class="skill-data">
           <ul><li>Grass Valley LDX series</li>
+          <li>Sony HXC100,HDC1500</li>
+          <li>Panasonic UC-4000,3800</li>
+        <li>Blackmagic URSA</li>
+        <strong><li>Remote Camera</li></strong>
+        <li>Panasonic PTZ</li>
+        <li>Sony BRC series</li>
+        <li>Canon CR-N500</li>
+        </ul>
+        </div>
+      </div>
+      <!-- signal transmission -->
+      <div class="skill">
+        <h4>Signal Transmission</h4>
+        <div class="skill-data">
+          <ul>
+          <li>Grass Valley LDX series</li>
+          <li>Sony HXC100,HDC1500</li>
+          <li>Panasonic UC-4000,3800</li>
+        <li>Blackmagic URSA</li>
+        <strong><li>Remote Camera</li></strong>
+        <li>Panasonic PTZ</li>
+        <li>Sony BRC series</li>
+        <li>Canon CR-N500</li>
+        </ul>
+        </div>
+      </div>
+      <!-- streaming -->
+      <div class="skill">
+        <h4>Streaming</h4>
+        <div class="skill-data">
+          <ul>
+          <li>Grass Valley LDX series</li>
           <li>Sony HXC100,HDC1500</li>
           <li>Panasonic UC-4000,3800</li>
         <li>Blackmagic URSA</li>

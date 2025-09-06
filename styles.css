@@ -41,6 +41,9 @@
       padding: 5px 15px;
       border-radius: 50px;
     }
+    .nav-mob{
+      display: none;
+    }
 
     nav a {
         color: #186dff;
@@ -59,6 +62,9 @@
         background: rgba(37, 117, 252, 0.2);
         color: #2575fc;
     }
+    bottom-nav {
+        display: none;
+    }
 
     /* Hero Section */
     .hero {
@@ -76,16 +82,20 @@
         height: 380px;
         perspective: 1000px;
         border-radius: 50%;
+        
     }
     .profile-pic{
-        position: relative;
-        top: 20%;
-        left: 63%;
+        position: absolute;
+        top: 25%;
+        left: 10%;
         transform: translate(9%, -10%);
         transition: transform 0.7s ease;
-        /* box-shadow: 0 8px 20px rgba(0,0,0,0.2); */
     }
     .shape{
+       position: absolute;
+        top: 30%;
+        left: 10%;
+        transform: translate(9%, -10%);
         transition: transform 0.7s ease;
     }
     .hero-image:hover .profile-pic{
@@ -149,7 +159,7 @@
 
     /* Sections */
     section {
-      padding: 80px 20px;
+      padding: 80px 15px;
       margin: 0 auto;
     }
 
@@ -304,6 +314,28 @@
       border-radius: 10px;
       transition: width 1.5s ease-in-out;
     }
+    .skill ul li{
+        list-style: none;
+      }
+    .resume-btn{
+      margin-top: 40px;
+      padding: 14px;
+      border-radius: 50px;
+      border: none;
+      cursor: pointer;
+      font-size: 16px;
+      color: #fff;
+      background: linear-gradient(90deg, #ff4d5a, #2575fc);
+      transition: 0.3s;
+      width: 30%;
+      margin-left: 50%;
+      transform: translateX(-50%);
+
+      }
+      .resume-btn button:hover {
+      transform: scale(1.05);
+      box-shadow: 0 8px 25px rgba(37,117,252,0.3);
+    }
 
     /* Contact Section */
     .contact form {
@@ -355,120 +387,300 @@
       font-weight: 500;
     }
 
-    /* Responsive screen 2560*/
-    @media (max-width: 2560px) {
-  /* Styles for screens 2560px wide and below */
-  body {
-    font-size: 1rem;
-  }
-  .hero-text h2 p button{
-    font-size: 1.5rem;
-  }
-  .hero-image img{
-        width: 420px;
-        height: 480px;
-        perspective: 1000px;
-        border-radius: 50%;
+     @media (max-width: 1024px) {
+      .hero {
+        justify-content: space-between;
+        flex-direction: row;
+        text-align: center;
+        padding-top: 100px;
+        gap: 30px;
+        
+      }
+      .hero h2 {
+        font-size: 42px;
+      }
+      .hero-image img{
+        width: 280px;
+        height: 340px;
+      }
+      .stats{
+        left: 5%;
+        gap: 15rem; 
+      }
+      
     }
-    .profile-pic{
-        position: absolute;
-        top: 25%;
-        left: 60%;
-        transform: translate(9%, -10%);
-        transition: transform 0.7s ease;
-        /* box-shadow: 0 8px 20px rgba(0,0,0,0.2); */
-    }
-    .shape{
-        transition: transform 0.7s ease;
-    }
-    .hero-image:hover .profile-pic{
-        transform: translate(9%, -20%);
-        transition: ease-in-out 0.0.7s;
-    }
-    .hero-image:hover .shape{
-        transform: rotate(45deg);
-        transition: ease-in-out 0.7s;
-    }
+   
 
-}
-/* responsive screen 1440px  */
-    @media (max-width: 1440px) {
-  /* Styles for screens 1440px wide and below */
-  body {
-    font-size: 15px;
-  }
-  .hero-image img{
-        width: 320px;
-        height: 380px;
-        perspective: 1000px;
-        border-radius: 50%;
-    }
-    .profile-pic{
-        position: absolute;
-        top: 18%;
-        left: 63%;
-        transform: translate(9%, -10%);
-        transition: transform 0.7s ease;
-        /* box-shadow: 0 8px 20px rgba(0,0,0,0.2); */
-    }
-    .shape{
-        transform: rotate(45deg);
-        transition: transform 0.7s ease;
-    }
-    .hero-image:hover .profile-pic{
-        transform: translate(9%, -20%);
-        transition: ease-in-out 0.0.7s;
-    }
-    .hero-image:hover .shape{
-        transform: rotate(85deg);
-        transition: ease-in-out 0.7s;
-    }
-
-}
-/* responsive screen 1024px  */
-    @media (max-width: 1024px) {
-  /* Styles for screens 1024px wide and below */
-  body {
-    font-size: 15px;
-  }
-  .hero-image img{
-        width: 320px;
-        height: 380px;
-        perspective: 1000px;
-        border-radius: 50%;
-    }
-    .profile-pic{
-        position: absolute;
-        top: 30%;
-        left: 63%;
-        transform: translate(9%, -10%);
-        transition: transform 0.7s ease;
-        /* box-shadow: 0 8px 20px rgba(0,0,0,0.2); */
-    }
-    .shape{
-        transition: transform 0.7s ease;
-    }
-    .hero-image:hover .profile-pic{
-        transform: translate(9%, -20%);
-        transition: ease-in-out 0.0.7s;
-    }
-    .hero-image:hover .shape{
-        transform: rotate(45deg);
-        transition: ease-in-out 0.7s;
-    }
-
-}
+    /* responsive 768px */
     @media (max-width: 768px) {
+      section {
+    padding: 60px 10px;
+    margin: 0 auto;
+}
+      nav{
+        display: none;
+      }
+      header{
+        justify-content: center;
+        background: linear-gradient(90deg, #ff4d5a, #2575fc);
+        padding: 5px 10px;
+        border-radius: 0 0 10px 10px;
+      }
+      header h1{
+        font-weight: 100;
+        padding: 5px 5px;
+        border-radius: 50px;
+        background: transparent;
+      }
+      header h1 a{
+        font-size: 2rem;
+        font-family: brush script mt, cursive;
+        color: #fff;
+      }
+ /* Navbar */
+ body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background: #f4f6fa;
+    }
+    .bottom-nav {
+      position: fixed;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      background: linear-gradient(90deg, #ff4d5a, #2575fc);
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+      height: 65px;
+      border-radius: 10px 10px 0 0;
+      z-index: 1000;
+    }
+
+    .bottom-nav a {
+      color: #a3b3c9;
+      text-decoration: none;
+      font-size: 22px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex: 1;
+      transition: color 0.3s;
+    }
+
+    .bottom-nav a:hover,
+    .bottom-nav a.active {
+      color: white;
+    }
+
+      .hero {
+        justify-content: space-between;
+        flex-direction: row;
+        text-align: center;
+        padding-top: 100px;
+        gap: 30px;
+        
+      }
       .hero h2 {
         font-size: 38px;
       }
-      .journey-item {
-        width: 90% !important;
-        left: 5% !important;
+      .hero-text{
+        width: 65%;
       }
-      .journey-item::before {
-        left: -30px !important;
+      .hero-text button{
+        padding: 10px 25px;
+        font-size: 14px;
       }
+      .hero-image img{
+        width: 230px;
+        height: 280px;
+        top: 35%;
+        left: 5%;
+      }
+      .hero-image img:nth-child(2){
+        top: 28%;
+        left: 5%;
+      }
+      
+      .stats{
+        display: flex;
+        flex-direction: row;
+        left: 8%;
+        gap: 8rem; 
+      }
+      .projects {
+      display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    gap: 30px;
+      }
+      .skills {
+        grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+        gap: 20px;
+      }
+      .skill ul li{
+        list-style: none;
+      }
+    
+      .resume-btn{
+      margin-top: 20px;
+      padding: 14px;
+      border-radius: 50px;
+      border: none;
+      cursor: pointer;
+      font-size: 16px;
+      color: #fff;
+      background: linear-gradient(90deg, #ff4d5a, #2575fc);
+      transition: 0.3s;
+      width: 50%;
+      margin-left: 25%;
+      }
+      .resume-btn button:hover {
+      transform: scale(1.05);
+      box-shadow: 0 8px 25px rgba(37,117,252,0.3);
     }
 
-  
+    }
+
+    /* responsive 425px */
+      @media (max-width: 425px) {
+      section {
+    padding: 60px 10px;
+    margin: 0 auto;
+}
+      nav{
+        display: none;
+      }
+      .menu-btn{
+        display: flex;
+        cursor: pointer;
+        
+      }
+
+      .hero {
+        justify-content: space-around;
+        flex-direction: row;
+        text-align: center;
+        padding-top: 100px;
+        gap: 10px;
+        
+      }
+      .hero h2 {
+        font-size: 28px;
+      }
+      .hero-text{
+        transform: translateX(20%);
+        width: 55%;
+      }
+      .hero-text button{
+        padding: 10px 25px;
+        font-size: 14px;
+      }
+      .hero-image img{
+        width: 150px;
+        height: 190px;
+        top: 28%;
+        left: 5%;
+      }
+      .hero-image img:nth-child(2){
+        top: 25%;
+        left: 5%;
+      }
+      
+      .stats{
+        font-size: 0.8rem;
+        display: flex;
+        flex-direction: column;
+        top: 60%;
+        left: 5%;
+        gap: 1rem; 
+      }
+      .journey-item{
+        font-size: 0.8rem;
+        padding: 10px;
+      }
+      .projects {
+      display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    gap: 30px;
+    font-size: 0.8rem;
+    padding: 10px;
+      }
+      .skills {
+        grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+        gap: 20px;
+        font-size: 0.8rem;
+    padding: 10px;
+      }
+      .skill ul li{
+        list-style: none;
+      }
+    
+      .resume-btn{
+      margin-top: 20px;
+      padding: 14px;
+      border-radius: 50px;
+      border: none;
+      cursor: pointer;
+      font-size: 16px;
+      color: #fff;
+      background: linear-gradient(90deg, #ff4d5a, #2575fc);
+      transition: 0.3s;
+      width: 50%;
+      margin-left: 25%;
+      }
+      .resume-btn button:hover {
+      transform: scale(1.05);
+      box-shadow: 0 8px 25px rgba(37,117,252,0.3);
+    }
+     .contact form {
+      display: flex;
+      flex-direction: column;
+      gap: 15px;
+      max-width: 350px;
+      margin: 0 auto;
+    }
+
+
+    }
+
+    /* responsive 320px */
+      @media (max-width: 320px) {
+      section {
+        padding: 10px 10px;
+        margin: 0 auto;
+      }
+      header{
+        padding: 15px 20px;
+      }
+      .hero h2 {
+        font-size: 24px;
+      }
+      .hero-text{
+        transform: translateX(20%);
+        width: 55%;
+      }
+      .journey-item{
+        font-size: 0.7rem;
+        padding: 8px;
+      }
+      .projects {
+        font-size: 0.7rem;
+        padding: 5px;
+      }
+      .skills {
+        font-size: 0.7rem;
+        padding: 5px;
+      }
+      section h2{
+        font-size: 14px;
+      }
+      .resume-btn{
+        padding: 5px;
+        margin-left: 50%;
+        transform: translateX(-50%);
+      }
+      .contact form {
+        max-width: 250px;
+        margin: 0 auto;
+      }
+    }
