@@ -498,8 +498,9 @@
     }
 
       .hero {
+        display: flex;
         justify-content: space-between;
-        flex-direction: row;
+        flex-direction: column;
         text-align: center;
         padding-top: 100px;
         gap: 30px;
@@ -509,6 +510,10 @@
         font-size: 38px;
       }
       .hero-text{
+        position: absolute;
+        top: 30%;
+        left: 50%;
+        transform: translate(-30%, -40%);
         width: 65%;
       }
       .hero-text button{
@@ -518,18 +523,16 @@
       .hero-image img{
         width: 230px;
         height: 280px;
-        top: 35%;
         left: 5%;
       }
       .hero-image img:nth-child(2){
-        top: 28%;
         left: 5%;
       }
       
       .statistics{
         width: 100%;
         position: absolute;
-        top: 91%;
+        top: 85%;
         left: 50%;
         transform: translate(-50%, -50%);
         background: rgba(255,255,255,0.1);
@@ -608,8 +611,11 @@
         font-size: 28px;
       }
       .hero-text{
-        transform: translateX(20%);
-        width: 55%;
+         position: absolute;
+        top: 55%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+       width: 65%;
       }
       .hero-text button{
         padding: 10px 25px;
@@ -618,12 +624,14 @@
       .hero-image img{
         width: 150px;
         height: 190px;
-        top: 28%;
-        left: 5%;
+        position: absolute;
+        top: 15%;
+        left: 28%;
       }
       .hero-image img:nth-child(2){
-        top: 25%;
-        left: 5%;
+        position: absolute;
+        top: 13%;
+        left: 28%;
       }
       
       .statistics{
@@ -711,8 +719,27 @@
         font-size: 24px;
       }
       .hero-text{
-        transform: translateX(20%);
-        width: 55%;
+         position: absolute;
+        top: 55%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+       width: 65%;
+      }
+      .hero-text button{
+        padding: 10px 25px;
+        font-size: 14px;
+      }
+      .hero-image img{
+        width: 150px;
+        height: 190px;
+        position: absolute;
+        top: 15%;
+        left: 25%;
+      }
+      .hero-image img:nth-child(2){
+        position: absolute;
+        top: 13%;
+        left: 25%;
       }
       .journey-item{
         font-size: 0.7rem;
